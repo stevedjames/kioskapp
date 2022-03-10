@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="left-section ">
+        <div class="status-space box">
+            <router-outlet ></router-outlet>
+        </div>
+        <div class="mode-selection">
+            <app-content-left-mode (buttonName)="getButtonName($event)"></app-content-left-mode>
+        </div>
+    </div>
+    <div class="right-section box">
+        <app-content-right *ngIf="currentButtonName == ' '"></app-content-right>
+        <app-content-right-courier *ngIf="currentButtonName == 'courier'"></app-content-right-courier>
+        <app-content-right-visitor *ngIf="currentButtonName == 'visitor'"></app-content-right-visitor>
+        <app-content-right-outpass *ngIf="currentButtonName == 'outpass'"></app-content-right-outpass>
+        <!-- <router-outlet name="forContentRight" ></router-outlet> -->
+  </div>
+</div>

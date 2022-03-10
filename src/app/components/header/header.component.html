@@ -1,0 +1,24 @@
+<header>
+    <div class="header-left">
+        <img src="../assets/images/duk_logo.png" alt="duk_logo" height="50em" />
+        <h1>KIOSK</h1>
+    </div>
+    <div class="header-right">
+        <div class="help passive-btn box">?</div>
+        <div class="status-bar passive-btn box">
+            <div class="network-status">
+                <img src="../assets/images/wifi.png" alt="" />
+            </div>
+            <div class="sanitizer-level" (click)=handleClick($event)>
+                <img src="../assets/images/Sanitizer.png" alt="" />{{sanitizerLevel}}%
+            </div>
+        </div>
+        <div
+            style="width: 250px; text-align: left; font-size: larger"
+            class="datetime"
+            id="datetime"
+        > {{todayDate | date:'medium'}}
+
+        </div>
+    </div>
+  </header>
